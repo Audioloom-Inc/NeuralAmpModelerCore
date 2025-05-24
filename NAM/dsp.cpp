@@ -1,5 +1,4 @@
 #include <algorithm> // std::max_element
-#include <algorithm>
 #include <cmath> // pow, tanh, expf
 #include <filesystem>
 #include <fstream>
@@ -29,7 +28,7 @@ void nam::DSP::prewarm()
   if (prewarmSamples == 0)
     return;
 
-  const size_t bufferSize = std::max(mMaxBufferSize, 1);
+  const size_t bufferSize = (std::max)(mMaxBufferSize, 1);
   std::vector<NAM_SAMPLE> inputBuffer, outputBuffer;
   inputBuffer.resize(bufferSize);
   outputBuffer.resize(bufferSize);
